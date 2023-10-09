@@ -18,7 +18,7 @@ trait NovaHelpers
      *
      * @return array
      */
-    public function novaContext()
+    public function novaGetContext()
     {
         $segments = request()->segments() ?? [];
         $queryParams = request()->query() ?? [];
@@ -69,7 +69,7 @@ trait NovaHelpers
      *
      * @return null|Model
      */
-    public function novaGetParent(string $resourceNamespacePrefix = 'App\\Nova')
+    public function novaGetParentModel(string $resourceNamespacePrefix = 'App\\Nova')
     {
         $viaResource = request()->query('viaResource');
         $viaResourceId = request()->query('viaResourceId');
