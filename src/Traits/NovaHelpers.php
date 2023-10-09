@@ -2,6 +2,7 @@
 
 namespace Brunocfalcao\LaravelNovaHelpers\Traits;
 
+use Brunocfalcao\LaravelHelpers\Utils\DomainPatternIdentifier;
 use Illuminate\Support\Str;
 
 /**
@@ -20,8 +21,6 @@ trait NovaHelpers
      */
     public function novaContext()
     {
-        $context = [];
-
         $segments = request()->segments() ?? [];
         $queryParams = request()->query() ?? [];
         $method = request()->method();
