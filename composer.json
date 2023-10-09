@@ -1,0 +1,42 @@
+{
+    "name": "brunocfalcao/laravel-nova-helpers",
+    "description": "Laravel Nova Helpers - Swiss army knife to complement your Laravel Nova Admin",
+    "keywords": [
+        "brunocfalcao"
+    ],
+    "homepage": "https://github.com/brunocfalcao/brunocfalcao/laravel-nova-helpers",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Bruno Falcão",
+            "email": "bruno.c.falcao@brunofalcao.me",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0",
+        "brunocfalcao/laravel-helpers": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Brunocfalcao\\LaravelNovaHelpers\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Brunocfalcao\\LaravelNovaHelpers\\LaravelNovaHelpersServiceProvider"
+            ]
+        }
+    }
+}
