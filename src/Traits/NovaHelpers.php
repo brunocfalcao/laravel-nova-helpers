@@ -2,7 +2,6 @@
 
 namespace Brunocfalcao\LaravelNovaHelpers\Traits;
 
-use Brunocfalcao\LaravelHelpers\Utils\DomainPatternIdentifier;
 use Illuminate\Support\Str;
 
 /**
