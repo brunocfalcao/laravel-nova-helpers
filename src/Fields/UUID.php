@@ -29,6 +29,7 @@ class UUID extends Text
         $this->hideFromIndex();
 
         $this->readonly();
+        $this->hideWhenCreating();
 
         if ($resourceId) {
             // If updating, ignore the current model ID
