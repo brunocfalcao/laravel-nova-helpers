@@ -8,7 +8,7 @@ use Laravel\Nova\Nova;
 
 class UUID extends Text
 {
-    public function __construct($name = 'UUID', $attribute = 'uuid', callable $resolveCallback = null)
+    public function __construct($name = 'UUID', $attribute = 'uuid', ?callable $resolveCallback = null)
     {
         parent::__construct($name, $attribute, $resolveCallback);
 

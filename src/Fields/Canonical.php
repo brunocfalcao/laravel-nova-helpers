@@ -8,7 +8,7 @@ use Laravel\Nova\Nova;
 
 class Canonical extends Text
 {
-    public function __construct($name = 'Canonical', $attribute = 'canonical', callable $resolveCallback = null)
+    public function __construct($name = 'Canonical', $attribute = 'canonical', ?callable $resolveCallback = null)
     {
         parent::__construct($name, $attribute, $resolveCallback);
 
