@@ -40,7 +40,7 @@ class FKLink extends Text
                 $prefix.'/';
             }
 
-            $url = config('nova.path')."resources/{$resourceUriKey}/{$idValue}";
+            $url = config('nova.path')."/resources/{$resourceUriKey}/{$idValue}";
 
             return "<a class=\"link-default\" href='{$url}'>{$displayValue}</a>";
         });
