@@ -2,7 +2,14 @@
 
 namespace Brunocfalcao\NovaHelpers\Macros;
 
+use Illuminate\Support\Str;
 use Laravel\Nova\Fields\Field;
+
+Field::macro('capitalizeFirst', function () {
+    return $this->displayUsing(function ($value) {
+        return Str::ucfirst($value);
+    });
+});
 
 Field::macro('readonlyIfViaResource', function (string|array $resources = []) {
 
