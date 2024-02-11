@@ -30,8 +30,8 @@ class Canonical extends Text
             $tableName = $model->getTable();
 
             // Set the rules.
-            $this->creationRules('required', 'unique:'.$tableName.','.$attribute);
-            $this->updateRules('required', "unique:{$tableName},{$attribute},{{resourceId}}");
+            $this->creationRules('unique:'.$tableName.','.$attribute);
+            $this->updateRules("unique:{$tableName},{$attribute},{{resourceId}}");
         }
     }
 }
