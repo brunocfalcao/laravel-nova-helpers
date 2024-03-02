@@ -12,15 +12,19 @@ if (! function_exists('nova_notify')) {
      */
     function nova_notify($notifiable, array $params)
     {
-        $notification = NovaNotification::make();
+        if ($notifiable) {
+            $notification = NovaNotification::make();
 
-        foreach (['message', 'action', 'icon', 'type'] as $key) {
-            if (array_key_exists($key, $params)) {
-                $notification->$key($params[$key]);
+            foreach (['message', 'action', 'icon', 'type'] as $key) {
+                if (array_key_exists($key, $params)) {
+                    $notification->$key($params[$key]);
+                }
             }
-        }
 
-        $notifiable->notify($notification);
+            $notifiable->notify($notification);
+        } else {
+            info('-- '.$params['message'].' --');
+        }
     }
 }
 
