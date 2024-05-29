@@ -12,7 +12,7 @@ if (! function_exists('nova_notify')) {
      */
     function nova_notify($notifiable, array $params)
     {
-        if ($notifiable) {
+        if (class_exists(NovaNotification::class) && $notifiable) {
             $notification = NovaNotification::make();
 
             foreach (['message', 'action', 'icon', 'type'] as $key) {
@@ -22,8 +22,6 @@ if (! function_exists('nova_notify')) {
             }
 
             $notifiable->notify($notification);
-        } else {
-            info('-- '.$params['message'].' --');
         }
     }
 }
