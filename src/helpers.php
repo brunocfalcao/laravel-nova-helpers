@@ -1,30 +1,6 @@
 <?php
 
 use Brunocfalcao\LaravelHelpers\Utils\DomainPatternIdentifier;
-use Laravel\Nova\Notifications\NovaNotification;
-
-if (! function_exists('nova_notify')) {
-
-    /**
-     * @param  [type] $notifiable The model instance to notify
-     * @param  array  $params  ['message', 'action', 'icon', 'type']
-     * @return void
-     */
-    function nova_notify($notifiable, array $params)
-    {
-        if (class_exists(NovaNotification::class) && $notifiable) {
-            $notification = NovaNotification::make();
-
-            foreach (['message', 'action', 'icon', 'type'] as $key) {
-                if (array_key_exists($key, $params)) {
-                    $notification->$key($params[$key]);
-                }
-            }
-
-            $notifiable->notify($notification);
-        }
-    }
-}
 
 /**
  * Returns a boolean in case the resource that is being targeted is being
