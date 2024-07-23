@@ -30,5 +30,4 @@ Field::macro('helpInfo', function ($message) {
     return $this->help("<span class='text-base text-primary-500'>{$message}</span>");
 });
 
-Field::macro('resolveOnIndex', function ($value) {
-});
+Field::macro('resolveOnIndex', function ($value) {});
